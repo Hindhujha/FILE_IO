@@ -12,6 +12,10 @@ namespace File_IO
             ReadAllTexts();
             CopyFile();
             DeleteFile();
+            Console.WriteLine("*****************************************************");
+            Console.WriteLine("STREAM READER: ");
+            Streams readwrite =new Streams();
+            readwrite.StreamReader();
         }
 
         public static void FileExists()
