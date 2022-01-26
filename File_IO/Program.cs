@@ -9,12 +9,13 @@ namespace File_IO
             Console.WriteLine("WELCOME TO FILE IO PROGRAMS");
             FileExists();
             ReadAllLines();
+            ReadAllTexts();
         }
 
         public static void FileExists()
         {
             string path = @"D:\SAMPLE.txt";
-            if(File.Exists(path))
+            if (File.Exists(path))
             {
                 Console.WriteLine("FILE IS EXISTS");
             }
@@ -28,5 +29,15 @@ namespace File_IO
             Console.WriteLine(allLines[0]);
             Console.WriteLine(allLines[2]);
         }
+
+        public static void ReadAllTexts()
+        {
+            string path = @"D:\SAMPLE.txt";
+            string allTexts = File.ReadAllText(path);
+
+            Console.WriteLine(allTexts);
+        }
+
+   
     }
 }
