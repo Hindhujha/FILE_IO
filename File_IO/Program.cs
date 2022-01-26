@@ -11,6 +11,7 @@ namespace File_IO
             ReadAllLines();
             ReadAllTexts();
             CopyFile();
+            DeleteFile();
         }
 
         public static void FileExists()
@@ -46,6 +47,11 @@ namespace File_IO
             File.Copy(path, copyPath);
         }
 
+        public static void DeleteFile()
+        {
+            string path= @"D:\BridgeLabz\DEMO.txt";
+            File.Delete(path);
+        }
 
     }
 }
