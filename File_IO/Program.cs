@@ -10,6 +10,7 @@ namespace File_IO
             FileExists();
             ReadAllLines();
             ReadAllTexts();
+            CopyFile();
         }
 
         public static void FileExists()
@@ -38,6 +39,13 @@ namespace File_IO
             Console.WriteLine(allTexts);
         }
 
-   
+        public static void CopyFile()
+        {
+            string path = @"D:\SAMPLE.txt";
+            string copyPath = @"D:\BridgeLabz\SAMPLENEW.txt";
+            File.Copy(path, copyPath);
+        }
+
+
     }
 }
