@@ -10,7 +10,7 @@ namespace File_IO
     {
         public void StreamReader()
         {
-            string path = @"D:\BridgeLabz\.vs\STREAM.txt";
+            string path = @"D:\BridgeLabz\FILE_IO\File_IO\STREAM.txt";
             using(StreamReader sr=File.OpenText(path))
             {
                 string s = "";
@@ -20,5 +20,19 @@ namespace File_IO
                 }
             }
         }
+
+        public void StreamWriter()
+        {
+            string path= @"D:\BridgeLabz\FILE_IO\File_IO\STREAM.txt";
+            using (StreamWriter sr = File.AppendText(path))
+            {
+                sr.WriteLine("\nTHIS IS .NET");
+                sr.Close();
+                Console.WriteLine(File.ReadAllText(path));
+            }
+        }
+
+
+
     }
 }
